@@ -20,9 +20,23 @@ import {
 
 const App = () => {
   return (
-    <View>
-      <Text>Hey Watsup</Text>
+    <View style={styles.container}>
+      <Text style={styles.loadInText}>Snö</Text>
     </View>
   );
 };
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadInText: {
+    fontSize: 88,
+    fontFamily: "Montserrat-Medium"
+  }
+}) 
+
 export default App;
