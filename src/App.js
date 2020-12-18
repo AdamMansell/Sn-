@@ -18,11 +18,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {Router, Scene} from 'react-native-router-flux';
+import LoadingScene from './scenes/LoadingScene';
+
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.loadInText}>Snö</Text>
-    </View>
+    <Router>
+      <Scene key="loading" component={LoadingScene}></Scene>
+    </Router>
   );
 };
 
@@ -35,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black'
   },
   loadInText: {
-    fontSize: 88,
+    fontSize: 80,
     color: 'white',
     fontFamily: "Montserrat-Medium"
   }
