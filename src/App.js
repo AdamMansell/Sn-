@@ -1,22 +1,6 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View, // <div>
-  Text, // <p>, <h1>
-  StatusBar,
-  TouchableHighlight, // touch button that you can press and submit a form for example
-  TextInput // <input value={} onChange={handleOnchange}>
-} from 'react-native'; // react-dom
+import { StyleSheet, View, Text, } from 'react-native'; // react-dom
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 import {Router, Scene} from 'react-native-router-flux';
 import LoadingScene from './scenes/LoadingScene';
@@ -24,8 +8,13 @@ import LoadingScene from './scenes/LoadingScene';
 const App = () => {
   return (
     <Router>
-      <Scene key="loading" component={LoadingScene}></Scene>
+      <Scene key="root">
+        <Scene key="loading" component={LoadingScene}></Scene>
+      </Scene>
     </Router>
+    // <View style={styles.container}>
+    //   <Text style={styles.loadInText}>Snö</Text>
+    // </View>
   );
 };
 

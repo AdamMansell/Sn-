@@ -7,7 +7,7 @@ class LoadingScene extends Component {
       <View style={styles.container}>
         <Text style={styles.loadInText}>Snö</Text>
       </View>
-    )
+    );
   }
 }
 
